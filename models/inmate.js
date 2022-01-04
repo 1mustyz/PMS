@@ -9,8 +9,8 @@ const InmateSchema = Schema({
     address: {type: String},
     dob: {type: String},
     occupation: {type: String},
-    offence: [{type: Object}],
-    visitor: [{type: Object}]
+    offence: [{type: Object, default: null}],
+    visitor: [{type: Object, default: null}]
 }, { timestamps: true });
 
 const Inmate = mongoose.model('inmate', InmateSchema)

@@ -6,7 +6,6 @@ const StaffSchema = new Schema({
     username: { type: String, required: true, unique: [ true, 'ID Number already exist' ] },
     firstName: { type: String, required: true},
     lastName: { type: String, required: true},
-    email: { type: String, required: true, unique: [ true, 'ID Number already exist' ] },
     gender: { type: String},
     phone: { type: String, required: true},
     address: { type: String},

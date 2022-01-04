@@ -25,7 +25,6 @@ exports.registerStaff = async (req, res, next) => {
           username: user.username,
           firstName: user.firstName,
           lastName: user.lastName,
-          email: user.email,
           phone: user.phone,
           image: user.image,
           role: user.role,
@@ -42,7 +41,7 @@ exports.registerStaff = async (req, res, next) => {
 
   // reset password
   exports.changePassword = async (req, res, next) => {
-    const {username} = req.query
+    const {username} = req.body
     Staff.findOne({ username },(err, user) => {
       // Check if error connecting
       if (err) {
@@ -95,7 +94,6 @@ exports.loginStaff = (req, res, next) => {
           username: user.username,
           firstName: user.firstName,
           lastName: user.lastName,
-          email: user.email,
           phone: user.phone,
           image: user.image,
           role: user.role,

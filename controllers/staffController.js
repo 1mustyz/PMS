@@ -10,7 +10,7 @@ exports.saveInmateOffence = async (req,res,next) => {
 
     offence.createdAt = msToTime(new Date().getTime() + Math.abs((new Date().getTimezoneOffset() * 60000))) 
     offence.day = new Date().getDay()
-    offence.year = new Date().getDay().getFullYear()
+    offence.year = new Date().getFullYear()
 
     // console.log(clientActions.createdAt)
 
@@ -27,7 +27,7 @@ exports.saveInmateVisitor = async (req,res,next) => {
 
   visitor.createdAt = msToTime(new Date().getTime() + Math.abs((new Date().getTimezoneOffset() * 60000))) 
   visitor.day = new Date().getDay()
-  visitor.year = new Date().getDay().getFullYear()
+  visitor.year = new Date().getFullYear()
 
   // console.log(clientActions.createdAt)
 
